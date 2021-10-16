@@ -1,0 +1,294 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+a {
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 1.5rem 3.7rem;
+  font-size: 1.7rem;
+  background: rgb(91, 133, 182);
+  color: white;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
+  /* BUTTON ANIMATION */
+}
+
+button:hover {
+  background: rgb(34, 55, 78);
+}
+/* Nav section with hero */
+
+.main-head {
+  background-color: #131c27;
+  color: white;
+}
+/* WHAT IS TRANSFORM AND TRANSLATE */
+
+nav {
+  flex-wrap: wrap;
+  min-height: 10vh;
+  padding: 2rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex: 2 1 40rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* HERO SETCTION */
+
+.hero {
+  background-image: linear-gradient(rgba(8, 8, 8, 0.301), transparent),
+    url("./img/landing-page.jpg");
+  min-height: 90vh;
+  background-position: center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero > h3 {
+  padding: 2rem;
+}
+
+/* LOCATIONS SECTION */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(8, 8, 8, 0.301), transparent),
+    url("./img/new-york-page.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+.cloud {
+  height: 51%;
+  width: 70%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+pointer-events: none;   /*   WE WONT be able to drag image */
+}
+.moving-cloud-1 {
+  height: 58%;
+  animation: cloudAnimation 2.8s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  left: 35%;
+  top: 15%;
+  z-index: -1;
+  opacity: 0.7; /*OPACTY...default-->invinsible */
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+
+.locations-head > h2 {
+  padding: 2rem 0rem;
+}
+
+/* use this to add gradiant to text */
+/* color is referring to the text color in that element.
+
+background-color refers to the background color
+
+background is shorthand to combine many background tags into one line.
+
+background: #ffffff url("img_tree.png") no-repeat right top; */
+
+.locations-head > h3 {
+  background: linear-gradient(rgb(53, 49, 49), rgb(90, 83, 83));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BENIFITS SECTION */
+.benifits-header {
+  background: rgb(60, 62, 63);
+  display: flex;
+  color: white;
+  min-height: 30vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benifits-header>h2 {
+  padding: 1rem;
+}
+.cards {
+  width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  
+  min-height: 40vh;
+text-align: center;
+  margin: 2rem 5rem;
+  flex-wrap: 1 1 25rem;
+  box-shadow: 0px 10px 10px rgba(12, 6, 6, 0.212),0px 10px 10px rgba(19, 18, 18, 0.521);
+}
+.card-icon {
+  display: flex;
+  justify-content: center;
+  padding: 2.3rem;
+  background: lightblue;
+}
+.card-icon >img{
+  min-height: 50px;
+  min-width: 40px;
+}
+
+/* LINEAR CRADIENT */
+/* CONTACT */
+#contact{
+  min-height: 100vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.521), transparent) ,url("/img/contact-mountain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper{
+  background:rgba(9, 24, 41, 0.788);
+  color: white;
+  min-width: 60vh;
+  min-height: 25vh;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.form-head {
+  text-align: center;
+  padding: 2rem;
+}
+
+ .name-form,.email-form{
+  padding: 1rem;
+  text-align: center;
+}
+
+.form-wrapper > label {
+  margin: 1rem 2rem;
+}
+.form-wrapper > button{
+  width: 100%;
+  margin-top: 8rem;
+
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 933px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media screen and (max-width: 933px) {
+  .locations-head > h3 {
+    background: rgba(23, 39, 56, 0.774);
+    -webkit-text-fill-color: rgb(250, 247, 242);
+  }
+}
+ 
+
+@media screen and (max-width: 671px) {
+  #logo {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cloud {
+    height: 35rem;
+  }
+  .moving-cloud-2 {
+    left: 60%;
+  }
